@@ -10,6 +10,7 @@
                     <th>Team</th>
                     <th>Bye</th>
                     <th>Projection</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                     <td>CAR</td>
                     <td>7</td>
                     <td>336.01</td>
+                    <td><button>Draft</button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -34,6 +36,7 @@
                     <td>NYG</td>
                     <td>8</td>
                     <td>348.32</td>
+                    <td><button>Draft</button></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -45,6 +48,7 @@
                     <td>NO</td>
                     <td>9</td>
                     <td>271.19</td>
+                    <td><button>Draft</button></td>
                 </tr>
             </tbody>
         </table>
