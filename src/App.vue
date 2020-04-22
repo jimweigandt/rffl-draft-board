@@ -10,7 +10,7 @@
 <script>
 import MasterTable from '@/components/MasterTable.vue'
 import DraftedTable from '@/components/DraftedTable.vue'
-import MasterTableTest from '@/json/MasterTableTest.json'
+import MasterTableTest from '@/components/json/MasterTableTest.json'
 
 export default {
   name: 'App',
