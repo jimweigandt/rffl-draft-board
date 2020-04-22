@@ -1,0 +1,4 @@
+https://www.taniarascia.com/getting-started-with-vue/
+
+#Turning a JSON into a data table tutorial
+https://www.developerdrive.com/creating-a-data-table-in-vue-js/
