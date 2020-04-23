@@ -1,5 +1,12 @@
 <template>
     <div id="master-table">
+        <HeadshotPictures />
+        
+        <!-- <div v-for="item in items" :key="item.headshot">
+            <img :src="require(`../assets/images/${item.headshot}`)" alt="yo">
+        </div> -->
+
+
         <table class="striped-table">
             <thead>
                 <tr>
@@ -10,13 +17,14 @@
                     <th>Team</th>
                     <th>Bye</th>
                     <th>Projection</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="item in items" :key="item.rank">
                      <td>{{ item.rank }}</td>
                      <td>{{ item.position }}</td>
-                     <td> <img id="headshot" :src="item.headshot" alt=""> </td>
+                     <td><img id="headshot" :src="require(`../assets/images/${item.headshot}`)" alt="yo"></td>
                      <td>{{ item.player }}</td>
                      <td>{{ item.team }}</td>
                      <td>{{ item.bye }}</td>
@@ -38,11 +46,6 @@ export default {
             items: MasterTableTest
         }
     },
-    methods: {
-        // getHeadshot(headshot) {
-        //     return require('@/assets/images/' + headshot + '.png')
-        // }
-    }
 }
 
 
