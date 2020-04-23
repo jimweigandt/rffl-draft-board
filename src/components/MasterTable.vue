@@ -16,8 +16,7 @@
                 <tr v-for="item in items" :key="item.rank">
                      <td>{{ item.rank }}</td>
                      <td>{{ item.position }}</td>
-                     <img id="headshot" v-bind:src="require(`@/assets/images/${item.headshot}.png`)" alt="">
-                     <!-- <td> <img id="headshot" v-bind:src="require(`@/assets/images/${item.headshot}.png`)" alt=""> </td> -->
+                     <td> <img id="headshot" :src="item.headshot" alt=""> </td>
                      <td>{{ item.player }}</td>
                      <td>{{ item.team }}</td>
                      <td>{{ item.bye }}</td>
@@ -38,6 +37,11 @@ export default {
         return {
             items: MasterTableTest
         }
+    },
+    methods: {
+        // getHeadshot(headshot) {
+        //     return require('@/assets/images/' + headshot + '.png')
+        // }
     }
 }
 

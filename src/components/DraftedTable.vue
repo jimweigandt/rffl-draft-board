@@ -1,6 +1,6 @@
 <template>
     <div id="drafted-table">
-        <thead>
+        <!-- <thead>
             <tr>
                 <th>Pick</th>
                 <th>Round</th>
@@ -12,7 +12,7 @@
                 <th>Projection</th>
                 <th></th>
             </tr>
-        </thead>
+        </thead> -->
     </div>
 </template>
 

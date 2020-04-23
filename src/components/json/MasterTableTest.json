@@ -9,7 +9,7 @@
     "projPpg": 21,
     "previous": 459.2,
     "previousPpg": 28.7,
-    "headshot": "@/assets/images/christian_mccaffrey.png",
+    "headshot": "require('@/assets/images/christian_mccaffrey.png')",
     "rank": 1,
     "positionRank": "RB1",
     "bestRank": 1,
