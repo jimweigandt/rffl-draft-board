@@ -1,19 +1,12 @@
 <template>
     <div id="master-table">
-        <HeadshotPictures />
-        
-        <!-- <div v-for="item in items" :key="item.headshot">
-            <img :src="require(`../assets/images/${item.headshot}`)" alt="yo">
-        </div> -->
-
-
         <table class="striped-table">
             <thead>
                 <tr>
-                    <th>Rank</th>
+                    <th v-on:click="sortTable(col)">Rank</th>
                     <th>Pos.</th>
                     <th></th>
-                    <th>Name</th>
+                    <th v-on:click="sortTable(col)">Name</th>
                     <th>Team</th>
                     <th>Bye</th>
                     <th>Projection</th>
@@ -46,6 +39,18 @@ export default {
             items: MasterTableTest
         }
     },
+    methods: {
+        "sortTable": function sortTable(col) {
+            this.rows.sort(function(a, b) {
+                if (a[col] > b[col]) {
+                    return 1;
+                } else if (a[col] < b[col]) {
+                    return -1;
+                }
+                return 0;
+            })
+        }
+    }
 }
 
 
