@@ -1,7 +1,5 @@
 <template>
   <div id="app" class="small-container">
-    <h1>Master List Table</h1>
-
     <master-table />
     <drafted-table />
   </div>
