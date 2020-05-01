@@ -55,7 +55,6 @@ export default {
     methods: {
         //This function looks at the table header that gets clicked to see it's current sorted direction
         sort: function(s) {
-            //if s == current sort, reverse
             if(s === this.currentSort) {
                 this.currentSortDir = this.currentSortDir === 'asc' ? 'desc':'asc';
             }
