@@ -17,17 +17,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in Items" :key="item.rank">
-                     <td>{{ item.rank }}</td>
-                     <td>{{ item.position }}</td>
-                     <td>{{ item.positionRank }}</td>
+                <tr v-for="item in sortedItems" :key="item.rank">
+                     <td>{{ item.pick }}</td>
+                     <td>{{ item.round }}</td>
                      <td><img id="headshot" :src="require(`../assets/images/${item.headshot}`)" alt="yo"></td>
-                     <td>{{ item.player }}</td>
+                     <td>{{ item.name }}</td>
                      <td>{{ item.team }}</td>
+                     <td>{{ item.position }}</td>
                      <td>{{ item.bye }}</td>
-                     <td>{{ item.projection }}</td>
-                     <td>{{ item.projPpg }}</td>
-                     <td> <button>Draft</button> </td>
+                     <td>{{ item.vsAdp }}</td>
+                     <td>{{ item.vsRfflAdp }}</td>
+                     <td> <button>Remove</button> </td>
                 </tr>
             </tbody>
         </table>
@@ -83,9 +83,14 @@ export default {
         }
     }
 }
-}
 </script>
 
 <style>
+
+th {
+    font-size: 10pt;
+    white-space: nowrap;
+}
+
 
 </style>
