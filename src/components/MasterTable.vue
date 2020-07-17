@@ -17,8 +17,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in sortedItems" :key="item.rank">
-                     <td>{{ item.rank }}</td>
+                <tr v-for="(item, index) in sortedItems" :key="item.rank">
+                     <td>{{ item.rank }} </td>
                      <td>{{ item.position }}</td>
                      <td>{{ item.positionRank }}</td>
                      <td><img id="headshot" :src="require(`../assets/images/${item.headshot}`)" alt="yo"></td>
@@ -27,7 +27,7 @@
                      <td>{{ item.bye }}</td>
                      <td>{{ item.projection }}</td>
                      <td>{{ item.projPpg }}</td>
-                     <td> <button>Draft</button> </td>
+                     <td> <button ref="myButton" @click="draft(index)">Draft {{index}}</button> </td>
                 </tr>
             </tbody>
         </table>
@@ -45,6 +45,7 @@ export default {
     name: 'master-table',
     data() {
         return {
+            draftedPlayers: [],
             items: MasterTableTest,
             currentSort: 'name',
             currentSortDir:'asc',
@@ -69,6 +70,15 @@ export default {
         //This function goes back to previous itmes in the array.
         prevPage: function() {
             if(this.currentPage > 1) this.currentPage--;
+        },
+        draft: function (index) {
+
+            var playerData = this.items[index].player;
+            this.draftedPlayers.push(playerData);
+            this.$delete(this.items, index);
+
+            console.log(playerData);
+            console.log(this.draftedPlayers);
         }
     },
     computed: {
@@ -106,8 +116,13 @@ export default {
     justify-content: center;
 }
 
-th, td {
-    text-align:center;
+th {
+    text-align: center;
+    cursor: pointer;
+}
+
+td {
+    text-align: center;
 }
 
 .th-true:hover {
